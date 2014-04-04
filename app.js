@@ -40,7 +40,7 @@ var app = express();
 
 
 app.configure(function(){
-  app.set('port', process.env.STRONGLOOP_PORT || 3000);
+  app.set('port', process.env.PORT || 3000);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.favicon());
@@ -74,6 +74,6 @@ routes(app, options);
   console.log('StrongLoop Suite sample is now ready at ' + baseURL);
 });*/
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('restapi listening on port ' + app.get('port'));
+  console.log('vproduct listening on port ' + app.get('port'));
 });
 

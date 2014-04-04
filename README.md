@@ -21,8 +21,7 @@ Response should support :
 
 Try it out by visiting:
 
-```http://vproduct.herokuapp.com/products
-```
+### <a name="head1234">http://vproduct.herokuapp.com/products</a>###
 
 Try passing some of the parameters mentioned above on the url line.  The response will return a json object or csv file with 3 attributes:
  

@@ -24,6 +24,11 @@ module.exports = function(app, options) {
  //resource.setup(app, options);
 
  app.get('/products', function(req, res, next){
+	 
+	   if(_.isEmpty(req.query) ){
+			res.render('products');
+		}
+	   
 	
 		var queryObj = new Object();
 		var keywordQuery;

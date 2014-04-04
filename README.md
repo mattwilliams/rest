@@ -15,11 +15,16 @@ Resource should accept the following parameters (all are optional):
  * per-page - Default 100, only applicable if request is for JSON
  * page - Default 1 (count starts at 1), only applicable if request is for JSON
 
-Response should support be:
+Response should support :
  * Full CSV dump of all item URLs
  * JSON representation of results (use best judgment for snippet of each item). JSON should also include count of total items matched
 
-Try it out the below will return a json object with a products attribute containing 5 items which item attributes:
+Try it out by visiting:
+
+```http://vproduct.herokuapp.com/products
+```
+
+Try passing some of the parameters mentioned above on the url line.  The response will return a json object or csv file with 3 attributes:
  
 * image
 * price

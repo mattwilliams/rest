@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>vproduct</title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+	<article class="markdown-body entry-content" itemprop="mainContentOfPage"><h1>
+	<a name="user-content-vproduct" class="anchor" href="#vproduct"><span class="octicon octicon-link"></span></a>vproduct</h1>
+
+	<p>The Node.js challenge
+	Use whatever npm projects you would like</p>
+
+	<p>Create a RESTful resource, in Node, that accesses the BBYOPEN Products API (<a href="https://bbyopen.com/documentation/products-api/">https://bbyopen.com/documentation/products-api/</a>).</p>
+
+	<p>Resource should accept the following parameters (all are optional):</p>
+
+	<ul>
+	<li>minimum-price - Number that should be the lower end of the product prices returned</li>
+	<li>maximum-price - Number that should be the upper end of the product prices returned</li>
+	<li>marketplace - Boolean for whether-or-not returned items come from the BBY marketplace</li>
+	<li>new - Boolean for whether-or-not to include include "new" items</li>
+	<li>keyword - String that searches product name</li>
+	<li>per-page - Default 100, only applicable if request is for JSON</li>
+	<li>page - Default 1 (count starts at 1), only applicable if request is for JSON</li>
+	</ul><p>Response should support be:</p>
+
+	<ul>
+	<li>Full CSV dump of all item URLs</li>
+	<li>JSON representation of results (use best judgment for snippet of each item). JSON should also include count of total items matched</li>
+	</ul><p>Try it out the below will return a json object with a products attribute containing 5 items which item attributes:</p>
+
+	<ul>
+	<li>image</li>
+	<li>price</li>
+	<li>url</li>
+	</ul><p>This example returns json:</p>
+
+	<pre><code>http://vproduct.herokuapp.com/products?maximum-price=100&amp;keyword=mp3&amp;marketplace=true&amp;per-page=5&amp;format=json
+	</code></pre>
+
+	<p>This example downloads the data in csv format:</p>
+
+	<pre><code>http://vproduct.herokuapp.com/products?maximum-price=100&amp;keyword=mp3&amp;marketplace=true&amp;per-page=5&amp;format=csv
+	</code></pre></article>
+  </body>
+</html>
